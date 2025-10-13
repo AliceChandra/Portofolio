@@ -1,0 +1,52 @@
+/* Futuristic Animated Grid Background */
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(#00ffff22 1px, transparent 1px),
+                    linear-gradient(90deg, #8b5cf622 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 80px 80px, 80px 80px; }
+}
+
+/* Section Styling */
+.biodata, .personality, .hobbies {
+  background: rgba(10, 5, 30, 0.5);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+/* Hobby Card Style */
+.hobby-card {
+  background: rgba(20, 10, 50, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.1);
+}
+
+.hobby-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+/* Smooth Hover Effects */
+img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.15);
+}
+
+a, img, li, .hobby-card {
+  transition: all 0.3s ease;
+}

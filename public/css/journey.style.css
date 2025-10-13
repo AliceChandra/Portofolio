@@ -1,0 +1,65 @@
+/* Journey Page Styling */
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 2rem;
+  border-left: 3px solid rgba(139, 92, 246, 0.5);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #8b5cf6, #00ffff);
+  border-radius: 2px;
+  opacity: 0.4;
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #00ffff 0%, #8b5cf6 90%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffffaa;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.timeline li {
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.timeline li span {
+  display: inline-block;
+  min-width: 120px;
+  color: #00ffff;
+  font-weight: 600;
+}

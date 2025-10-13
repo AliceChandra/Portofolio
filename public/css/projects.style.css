@@ -1,0 +1,103 @@
+/* === Animated cyber grid background === */
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,0,255,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: moveGrid 40s linear infinite;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+@keyframes moveGrid {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 60px 60px, 60px 60px; }
+}
+
+/* === Glow & divider === */
+.glow {
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff99, 0 0 40px #ff00ff66;
+}
+
+.divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  border-radius: 9999px;
+}
+
+/* === Project Cards === */
+.project-card {
+  position: relative;
+  background: rgba(15, 1, 40, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.4);
+}
+
+/* === Card Content === */
+.card-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  filter: brightness(0.9);
+  transition: filter 0.4s ease;
+}
+
+.project-card:hover .project-img {
+  filter: brightness(1.15);
+}
+
+.project-title {
+  color: #ff66ff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+  color: #00ffff;
+}
+
+.project-desc {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-link {
+  font-weight: 600;
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #ff66ff;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .project-card {
+    transform: none !important;
+  }
+  .card-content {
+    text-align: center;
+  }
+}
