@@ -1,41 +1,63 @@
-/* Contact Page Futuristic Theme */
-
-.contact-card {
-  animation: glowIn 1s ease forwards;
+/* Fade glow animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
 }
 
-@keyframes glowIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-    box-shadow: none;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
-  }
+/* Section spacing */
+section {
+  scroll-margin-top: 100px;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: rgba(200, 200, 200, 0.4);
+/* Social card style */
+.social-card {
+  background: rgba(15, 0, 40, 0.6);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: #cbd5e1;
+  font-weight: 500;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  transition: all 0.3s ease;
 }
 
-input:focus,
-textarea:focus {
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+.social-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  border-color: #00ffff;
+  color: #00ffff;
 }
 
-button:hover {
-  box-shadow: 0 0 35px rgba(0, 255, 255, 0.3);
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 12px auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
-a i {
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
+.icon:hover {
+  transform: rotate(8deg) scale(1.05);
 }
 
-a:hover i {
-  transform: scale(1.15);
-  text-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+.username {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 8px;
 }
+
+/* Titles */
+h2 {
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+section { padding-top: 6rem; padding-bottom: 6rem; }
+h1, h2 { margin-bottom: 3rem; }

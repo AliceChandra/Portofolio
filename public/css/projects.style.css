@@ -1,59 +1,37 @@
-/* === Animated cyber grid background === */
-.cyber-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,0,255,0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-  animation: moveGrid 40s linear infinite;
-  z-index: 0;
-  opacity: 0.5;
-}
+/* === Futuristic Projects Page Styling === */
 
-@keyframes moveGrid {
-  from { background-position: 0 0, 0 0; }
-  to { background-position: 60px 60px, 60px 60px; }
-}
-
-/* === Glow & divider === */
-.glow {
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff99, 0 0 40px #ff00ff66;
-}
-
-.divider {
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, #00ffff, #ff00ff);
-  border-radius: 9999px;
-}
-
-/* === Project Cards === */
+/* Base Card Style */
 .project-card {
-  position: relative;
-  background: rgba(15, 1, 40, 0.7);
+  background: rgba(15, 1, 40, 0.6);
   border: 1px solid rgba(0, 255, 255, 0.15);
   border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.4s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* prefiks agar linternya berhenti error */
+  position: relative;
 }
 
+/* Hover Glow + Pulse */
 .project-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 40px rgba(255, 0, 255, 0.4);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  animation: pulseGlow 2s infinite;
 }
 
-/* === Card Content === */
-.card-content {
-  padding: 1.5rem;
-  text-align: left;
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.4); }
+  50% { box-shadow: 0 0 45px rgba(0, 255, 255, 0.6); }
 }
 
+/* Image */
 .project-img {
   width: 100%;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
   filter: brightness(0.9);
   transition: filter 0.4s ease;
 }
@@ -62,42 +40,66 @@
   filter: brightness(1.15);
 }
 
-.project-title {
-  color: #ff66ff;
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
+/* Content */
+.project-content {
+  padding: 1.5rem;
 }
 
-.project-card:hover .project-title {
-  color: #00ffff;
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .project-desc {
-  color: #b0b0b0;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+  color: #cbd5e1;
   line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .project-link {
-  font-weight: 600;
+  display: inline-block;
   color: #00ffff;
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .project-link:hover {
-  color: #ff66ff;
+  color: #8b5cf6;
+  text-shadow: 0 0 8px #00ffff;
 }
 
-/* === Responsive === */
+/* === Fade-in on Scroll === */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Delay Utilities === */
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .project-card {
     transform: none !important;
   }
-  .card-content {
+
+  .project-title,
+  .project-desc,
+  .project-link {
     text-align: center;
   }
 }

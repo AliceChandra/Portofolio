@@ -1,65 +1,41 @@
-/* Journey Page Styling */
-
-.timeline {
-  position: relative;
-  margin: 0 auto;
-  padding-left: 2rem;
-  border-left: 3px solid rgba(139, 92, 246, 0.5);
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, #8b5cf6, #00ffff);
-  border-radius: 2px;
-  opacity: 0.4;
-}
-
-.timeline-item {
-  margin-bottom: 3rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -9px;
-  top: 8px;
-  width: 14px;
-  height: 14px;
-  background: radial-gradient(circle, #00ffff 0%, #8b5cf6 90%);
-  border-radius: 50%;
-  box-shadow: 0 0 15px #00ffffaa;
-}
-
 .section-title {
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
 }
 
-.timeline ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.timeline li {
-  margin: 0.5rem 0;
+/* Card style mirip desain kamu, tapi futuristik */
+.journey-card {
+  background: rgba(15, 1, 40, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-weight: 500;
   color: #cbd5e1;
-  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
 }
 
-.timeline li span {
-  display: inline-block;
-  min-width: 120px;
+.journey-card:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  transform: translateY(-4px);
+  color: #ffffff;
+}
+
+ul li {
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+ul li span {
   color: #00ffff;
   font-weight: 600;
+  display: inline-block;
+  min-width: 130px;
 }

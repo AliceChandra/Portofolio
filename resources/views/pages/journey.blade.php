@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Journey - Futuristic Portfolio</title>
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
@@ -23,7 +21,6 @@
     }
   </script>
 
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ asset('css/journey.style.css') }}">
 </head>
 
@@ -42,64 +39,58 @@
     </div>
   </nav>
 
-  <!-- Journey Section -->
-  <section class="pt-40 pb-24 px-10 max-w-5xl mx-auto">
-    <h1 class="text-5xl font-extrabold text-center mb-12">
+  <!-- Main Content -->
+  <main class="pt-40 pb-24 px-6 md:px-16 max-w-6xl mx-auto">
+    <h1 class="text-5xl font-extrabold text-center mb-16">
       <span class="text-cyber">My</span> <span class="text-neon">Journey</span> 🧭
     </h1>
 
-    <!-- Timeline -->
-    <div class="timeline">
+    <!-- FORMAL EDUCATION -->
+    <section class="mb-16">
+      <h2 class="section-title text-cyber mb-6">Formal Education</h2>
+      <ul class="border-l-4 border-cyber/50 pl-6 space-y-3">
+        <li><span class="text-neon">2023 - Present</span> Take a Master Track of Information Technology in Binus University</li>
+        <li><span class="text-neon">2020 - 2023</span> Graduated from SMAK 2 Penabur (Natural Science Class)</li>
+        <li><span class="text-neon">2017 - 2020</span> Graduated from SMP Bilingual Program SBM</li>
+        <li><span class="text-neon">2011 - 2017</span> Graduated from SD SBM National Plus</li>
+        <li><span class="text-neon">2008 - 2011</span> Graduated from KB and Kindergarten in DAMAI</li>
+      </ul>
+    </section>
 
-      <!-- Formal Education -->
-      <div class="timeline-item">
-        <h2 class="section-title text-cyber">Formal Education</h2>
-        <ul>
-          <li><span>2010–2016</span> Elementary School – SBM</li>
-          <li><span>2016–2019</span> Junior High School – BPK Penabur</li>
-          <li><span>2019–2022</span> Senior High School – BPK Penabur</li>
-          <li><span>2022–Present</span> Binus University – Master Track of Information Technology</li>
-        </ul>
+    <!-- INFORMAL EDUCATION -->
+    <section class="mb-16">
+      <h2 class="section-title text-neon mb-8">Informal Education</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="{{ route('journey.academics') }}" class="journey-card block">Academics</a>
+        <a href="{{ route('journey.seminars') }}" class="journey-card block">Seminars</a>
+        <a href="{{ route('journey.trainings') }}" class="journey-card block">Trainings</a>
+        <a class="journey-card block">Communication Services</a>
       </div>
+    </section>
 
-      <!-- Informal Education -->
-      <div class="timeline-item">
-        <h2 class="section-title text-neon">Informal Education</h2>
-        <ul>
-          <li><span>2023</span> BNCC Techno Talk – AI for Web Developers</li>
-          <li><span>2024</span> Microsoft Edge x Education Webinar</li>
-          <li><span>2024</span> Leadership Development (LDK-A UKM Futsal)</li>
-          <li><span>2023</span> Community Service – Teaching Kids Coding</li>
-        </ul>
+    <!-- ADDITIONAL LEARNING -->
+    <section class="mb-16">
+      <h2 class="section-title text-cyber mb-8">Additional Learning</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="journey-card">Lecturing Session</div>
+        <div class="journey-card">Cross Interest</div>
+        <div class="journey-card">Extracurricular</div>
       </div>
+    </section>
 
-      <!-- Learning Experiences -->
-      <div class="timeline-item">
-        <h2 class="section-title text-cyber">Learning Experiences</h2>
-        <ul>
-          <li>Developed AI Chatbot Project using Laravel & OpenAI API</li>
-          <li>Created AR-based Web Prototype using Three.js</li>
-          <li>Explored Machine Learning Models using Python</li>
-        </ul>
+    <!-- ORGANIZATIONAL EXPERIENCE -->
+    <section>
+      <h2 class="section-title text-neon mb-8">Organizational Experience & Achievements</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="journey-card">Organizational Experience</div>
+        <div class="journey-card">Achievements</div>
       </div>
-
-      <!-- Organizational Experience -->
-      <div class="timeline-item">
-        <h2 class="section-title text-neon">Organizational Experience & Achievements</h2>
-        <ul>
-          <li><span>2023</span> BNCC Member – Software Development Division</li>
-          <li><span>2024</span> BINUS Soccer Club – Vice Captain</li>
-          <li><span>2024</span> National Algorithm Design Contest – Top 10</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="text-center py-6 border-t border-cyber/20 text-slate-500">
     © 2025 Alice Chandra — Journey Through Code 💜
   </footer>
-
 </body>
 </html>

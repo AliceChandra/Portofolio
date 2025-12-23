@@ -37,7 +37,7 @@
     <a href="/" class="text-2xl font-bold text-neon tracking-widest">Futuristic<span class="text-cyber">AI</span></a>
     <div class="space-x-8 text-slate-300">
       <a href="/" class="hover:text-neon transition">Home</a>
-      <a href="/about" class="text-neon font-semibold border-b-2 border-neon pb-1">About</a>
+      <a href="/about" class="text-cyber font-semibold">About</a>
       <a href="/projects" class="hover:text-neon transition">Projects</a>
       <a href="/skills" class="hover:text-neon transition">Skills</a>
       <a href="/journey" class="hover:text-neon transition">Journey</a>

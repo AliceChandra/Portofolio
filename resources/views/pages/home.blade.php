@@ -30,7 +30,7 @@
   <nav class="flex justify-between items-center px-10 py-6 bg-black/30 backdrop-blur-md border-b border-cyber fixed top-0 w-full z-50">
     <a href="/" class="text-2xl font-bold text-neon tracking-widest">Futuristic<span class="text-cyber">AI</span></a>
     <div class="space-x-8 text-slate-300">
-      <a href="/" class="hover:text-neon transition">Home</a>
+      <a href="/" class="text-cyber font-semibold">Home</a>
       <a href="/about" class="hover:text-neon transition">About</a>
       <a href="/projects" class="hover:text-neon transition">Projects</a>
       <a href="/skills" class="hover:text-neon transition">Skills</a>

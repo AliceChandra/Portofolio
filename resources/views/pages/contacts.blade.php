@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacts - Futuristic Portfolio</title>
+  <title>Contact - Futuristic Portfolio</title>
 
   <!-- Tailwind Official CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +23,6 @@
     }
   </script>
 
-  <!-- External CSS -->
   <link rel="stylesheet" href="{{ asset('css/contacts.style.css') }}">
 </head>
 
@@ -42,59 +41,79 @@
     </div>
   </nav>
 
-  <!-- Contact Section -->
-  <section class="pt-40 pb-24 px-10 text-center relative">
-    <h1 class="text-5xl font-extrabold mb-6">
-      <span class="text-cyber">Let's</span> <span class="text-neon">Connect 🤝</span>
+  <!-- Header -->
+  <section class="pt-40 pb-24 px-10 text-center fade-section">
+    <h1 class="text-5xl font-extrabold mb-8">
+      <span class="text-cyber">Connect</span> <span class="text-neon">With Me 💬</span>
     </h1>
-    <p class="text-slate-400 max-w-2xl mx-auto text-lg mb-16">
-      Got an idea, collaboration, or just want to say hi? Reach out and let’s build something futuristic together.
+    <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+      Let’s collaborate, chat, or build something futuristic together!  
+      Feel free to reach me through social media or the message form below.
     </p>
+  </section>
 
-    <!-- Contact Form -->
-    <div class="max-w-3xl mx-auto bg-black/30 border border-cyber/30 rounded-2xl p-8 backdrop-blur-md shadow-[0_0_30px_#8b5cf622] contact-card">
-      <form action="#" method="POST" class="space-y-6">
-        @csrf
-        <div class="flex flex-col text-left">
-          <label for="name" class="text-slate-300 mb-2 font-semibold">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" 
-                 class="p-3 bg-[#0a0018] border border-slate-700 rounded-lg text-white focus:outline-none focus:border-neon transition">
-        </div>
+  <!-- Social Media Section -->
+  <section class="py-20 px-10 text-center border-t border-cyber/20 fade-section">
+    <h2 class="text-3xl font-bold mb-10 text-cyber tracking-wide">Find Me on Socials 🌐</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center max-w-6xl mx-auto">
 
-        <div class="flex flex-col text-left">
-          <label for="email" class="text-slate-300 mb-2 font-semibold">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" 
-                 class="p-3 bg-[#0a0018] border border-slate-700 rounded-lg text-white focus:outline-none focus:border-neon transition">
-        </div>
+      <div class="social-card"><img src="{{ asset('images/discord.png') }}" class="icon"><p class="username">alicechandra_78925</p></div>
+      <div class="social-card"><img src="{{ asset('images/instagram.png') }}" class="icon"><p class="username">@busantigerssoccer</p></div>
+      <div class="social-card"><img src="{{ asset('images/line.png') }}" class="icon"><p class="username">dragonman770</p></div>
+      <div class="social-card"><img src="{{ asset('images/youtube.png') }}" class="icon"><p class="username">ACBinusian27</p></div>
+      <div class="social-card"><img src="{{ asset('images/snapchat.png') }}" class="icon"><p class="username">busantigers</p></div>
+      <div class="social-card"><img src="{{ asset('images/facebook.png') }}" class="icon"><p class="username">Alice Chandra</p></div>
+      <div class="social-card"><img src="{{ asset('images/x.png') }}" class="icon"><p class="username">Alice Chandra</p></div>
 
-        <div class="flex flex-col text-left">
-          <label for="message" class="text-slate-300 mb-2 font-semibold">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Type your message..."
-                    class="p-3 bg-[#0a0018] border border-slate-700 rounded-lg text-white focus:outline-none focus:border-neon transition"></textarea>
-        </div>
-
-        <button type="submit"
-                class="w-full py-3 bg-gradient-to-r from-cyber to-neon text-black font-semibold rounded-lg hover:scale-105 hover:shadow-[0_0_25px_#00ffff55] transition">
-          Send Message 🚀
-        </button>
-      </form>
-    </div>
-
-    <!-- Social Links -->
-    <div class="mt-16 flex justify-center gap-8 text-3xl">
-      <a href="https://github.com" target="_blank" class="hover:text-neon transition"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com" target="_blank" class="hover:text-cyber transition"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:alice@example.com" class="hover:text-neon transition"><i class="fas fa-envelope"></i></a>
-      <a href="https://instagram.com" target="_blank" class="hover:text-cyber transition"><i class="fab fa-instagram"></i></a>
     </div>
   </section>
 
+  <!-- Message Form Section -->
+  <section class="py-20 px-10 text-center border-t border-cyber/20 fade-section">
+    <h2 class="text-3xl font-bold mb-10 text-neon tracking-wide">Send Me a Message ✉️</h2>
+
+    <form action="#" method="POST"
+          class="max-w-2xl mx-auto bg-[#0b0122]/70 border border-cyber/30 p-10 rounded-2xl shadow-[0_0_25px_#8b5cf633] backdrop-blur-md hover:shadow-[0_0_35px_#00ffff55] transition">
+      @csrf
+      <div class="mb-6 text-left">
+        <label for="name" class="text-slate-300 text-sm font-semibold">Name</label>
+        <input type="text" id="name" name="name" required
+               class="w-full bg-transparent border border-cyber/40 rounded-lg px-4 py-3 mt-2 text-slate-100 focus:outline-none focus:border-neon transition">
+      </div>
+
+      <div class="mb-6 text-left">
+        <label for="email" class="text-slate-300 text-sm font-semibold">Email</label>
+        <input type="email" id="email" name="email" required
+               class="w-full bg-transparent border border-cyber/40 rounded-lg px-4 py-3 mt-2 text-slate-100 focus:outline-none focus:border-neon transition">
+      </div>
+
+      <div class="mb-8 text-left">
+        <label for="message" class="text-slate-300 text-sm font-semibold">Message</label>
+        <textarea id="message" name="message" rows="5" required
+                  class="w-full bg-transparent border border-cyber/40 rounded-lg px-4 py-3 mt-2 text-slate-100 focus:outline-none focus:border-neon transition"></textarea>
+      </div>
+
+      <button type="submit"
+              class="w-full py-3 bg-gradient-to-r from-cyber to-neon text-black font-semibold rounded-lg hover:scale-105 hover:shadow-[0_0_20px_#00ffff66] transition">
+        Send Message 🚀
+      </button>
+    </form>
+  </section>
+
   <!-- Footer -->
-  <footer class="text-center py-6 border-t border-cyber/20 text-slate-500">
+  <footer class="text-center py-8 border-t border-cyber/20 text-slate-500 fade-section">
     © 2025 Alice Chandra — Crafted with 💜 & Cyber Vision
   </footer>
 
-  <!-- FontAwesome -->
-  <script src="https://kit.fontawesome.com/a2e0e6ad3f.js" crossorigin="anonymous"></script>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-section').forEach(section => observer.observe(section));
+  </script>
+
 </body>
 </html>
