@@ -60,10 +60,12 @@
         <div>2024 (August)</div>
         <div>Algodemy (Term 3)</div>
         <div>
-          <li>Computational Physics</li>
-          <li>OOP Java</li>
-          <li>Database</li>
-          <li>Computational Network</li>
+          <ul>
+            <li>Computational Physics</li>
+            <li>OOP Java</li>
+            <li>Database</li>
+            <li>Computational Network</li>
+          </ul>
         </div>
       </div>
 
@@ -71,10 +73,12 @@
         <div>2024 (March)</div>
         <div>Algodemy (Term 2)</div>
         <div>
-          <li>Scientific Computing</li>
-          <li>Data Structure</li>
-          <li>Human Computer</li>
-          <li>Interaction</li>
+          <ul>
+            <li>Scientific Computing</li>
+            <li>Data Structure</li>
+            <li>Human Computer</li>
+            <li>Interaction</li>
+          </ul>
         </div>
       </div>
 
@@ -82,10 +86,12 @@
         <div>2023 - Present</div>
         <div>BNCC</div>
         <div>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JS</li>
-          <li>Laravel</li>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Laravel</li>
+          </ul>
         </div>
       </div>
 
@@ -123,10 +129,12 @@
         <div>2021 - 2022</div>
         <div>Computer Science Club</div>
         <div>
-          <li>C++</li>
-          <li>Computational Thinking</li>
-          <li>MIT App Inventor</li>
-          <li>Logical Analysis</li>
+          <ul>
+            <li>C++</li>
+            <li>Computational Thinking</li>
+            <li>MIT App Inventor</li>
+            <li>Logical Analysis</li>
+          </ul>
         </div>
       </div>
 
