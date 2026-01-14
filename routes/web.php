@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Public Breeze Pages
+| Main Pages
 |--------------------------------------------------------------------------
 */
 
@@ -19,7 +19,19 @@ Route::get('/contacts', [MainController::class, 'contacts'])->name('contacts');
 
 /*
 |--------------------------------------------------------------------------
-| Public Breeze Pages
+| Informal Education Pages
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/about', [MainController::class, 'about'])->name('about');
+Route::get('/projects', [MainController::class, 'projects'])->name('projects');
+Route::get('/skills', [MainController::class, 'skills'])->name('skills');
+Route::get('/journey', [MainController::class, 'journey'])->name('journey');
+Route::get('/contacts', [MainController::class, 'contacts'])->name('contacts');
+
+/*
+|--------------------------------------------------------------------------
+| Breeze Pages
 |--------------------------------------------------------------------------
 */
 

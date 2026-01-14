@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title') - Futuristic Portfolio</title>
-  @vite('resources/css/app.css')
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-gradient-to-br from-black via-[#050816] to-[#02030a] text-slate-100">
   {{-- Navbar --}}
@@ -14,8 +14,8 @@
       <a href="{{ route('about') }}">About</a>
       <a href="{{ route('projects') }}">Projects</a>
       <a href="{{ route('skills') }}">Skills</a>
-      <a href="{{ route('timeline') }}">Journey</a>
-      <a href="{{ route('contact') }}">Contact</a>
+      <a href="{{ route('journey') }}">Journey</a>
+      <a href="{{ route('contacts') }}">Contact</a>
     </div>
   </nav>
 
