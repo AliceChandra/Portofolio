@@ -15,7 +15,7 @@
   100% { background-position: 80px 80px, 80px 80px; }
 }
 
-/* Section Styling */
+/* Section Boxes */
 .biodata, .personality, .hobbies {
   background: rgba(10, 5, 30, 0.5);
   border-radius: 16px;
@@ -49,4 +49,13 @@ img:hover {
 
 a, img, li, .hobby-card {
   transition: all 0.3s ease;
+}
+
+/* Section Padding & Titles */
+section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+h1, h2 {
+  margin-bottom: 3rem;
 }
