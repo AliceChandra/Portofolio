@@ -22,7 +22,7 @@
   </script>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ asset('css/journey_contents/informal_education/seminars.style.css') }}">
+  @vite('resources/css/journey_contents/informal_education/seminars.style.css')
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-black via-[#050016] to-[#090020] text-white font-sans">

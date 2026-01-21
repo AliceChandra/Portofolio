@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\InformalEducationController;
+use App\Http\Controllers\Pages\InformalEducationController;
 use App\Http\Controllers\Pages\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;

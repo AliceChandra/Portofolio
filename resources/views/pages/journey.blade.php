@@ -21,7 +21,8 @@
     }
   </script>
 
-  <link rel="stylesheet" href="{{ asset('css/journey.style.css') }}">
+  <!-- Custom CSS -->
+  @vite('resources/css/navbars/journey.style.css')
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-black via-[#050016] to-[#090020] text-white font-sans overflow-x-hidden">
@@ -61,10 +62,10 @@
     <section class="mb-16">
       <h2 class="section-title text-neon mb-8">Informal Education</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <a href="{{ route('journey.academics') }}" class="journey-card block">Academics</a>
-        <a href="{{ route('journey.seminars') }}" class="journey-card block">Seminars</a>
-        <a href="{{ route('journey.trainings') }}" class="journey-card block">Trainings</a>
-        <a class="journey-card block">Communication Services</a>
+        <a href="{{ route('journey_content.informal_education.academics') }}" class="journey-card block">Academics</a>
+        <a href="{{ route('journey_content.informal_education.seminars') }}" class="journey-card block">Seminars</a>
+        <a href="{{ route('journey_content.informal_education.trainings') }}" class="journey-card block">Trainings</a>
+        <a href="{{ route('journey_content.informal_education.comserv') }}" class="journey-card block">Communication Services</a>
       </div>
     </section>
 

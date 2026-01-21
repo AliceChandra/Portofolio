@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/navbars/contacts.style.css') }}">
+@vite('resources/css/navbars/contacts.style.css')
 @endpush
 
 @section('title', 'Contact')

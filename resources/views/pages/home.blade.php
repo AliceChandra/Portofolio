@@ -22,6 +22,9 @@
       }
     }
   </script>
+
+  <!-- Custom CSS -->
+  @vite('resources/css/app.css')
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-black via-[#050016] to-[#090020] text-white font-sans overflow-x-hidden">

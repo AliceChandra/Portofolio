@@ -12,6 +12,12 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-6 p-6 text-gray-900">
+                <a href="{{ route('pages.home') }}"
+                    class="text-indigo-600 hover:text-indigo-800 font-semibold">
+                    View my Portfolio
+                </a>
+            </div>
         </div>
     </div>
 </x-app-layout>

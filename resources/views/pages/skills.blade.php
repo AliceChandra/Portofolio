@@ -24,7 +24,7 @@
   </script>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ asset('css/skills.style.css') }}">
+  @vite('resources/css/navbars/skills.style.css')
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-black via-[#050016] to-[#090020] text-white font-sans overflow-x-hidden">
